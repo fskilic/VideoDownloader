@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F929ABE299B4D93002962E5 /* DownloaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F929ABD299B4D93002962E5 /* DownloaderTableViewCell.swift */; };
+		6F929AC0299B4DF8002962E5 /* DownloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F929ABF299B4DF8002962E5 /* DownloadVC.swift */; };
+		6F929AC2299B5523002962E5 /* SaveCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F929AC1299B5523002962E5 /* SaveCoreData.swift */; };
+		6F929AC6299BB0BC002962E5 /* LoginPageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F929AC5299BB0BC002962E5 /* LoginPageError.swift */; };
 		6FB90AEE299AC3BD00C03AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB90AED299AC3BD00C03AC2 /* AppDelegate.swift */; };
 		6FB90AF0299AC3BD00C03AC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB90AEF299AC3BD00C03AC2 /* SceneDelegate.swift */; };
-		6FB90AF2299AC3BD00C03AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB90AF1299AC3BD00C03AC2 /* ViewController.swift */; };
+		6FB90AF2299AC3BD00C03AC2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB90AF1299AC3BD00C03AC2 /* LoginVC.swift */; };
 		6FB90AF5299AC3BD00C03AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90AF3299AC3BD00C03AC2 /* Main.storyboard */; };
 		6FB90AF8299AC3BD00C03AC2 /* VideoDownloader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FB90AF6299AC3BD00C03AC2 /* VideoDownloader.xcdatamodeld */; };
 		6FB90AFA299AC3BD00C03AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB90AF9299AC3BD00C03AC2 /* Assets.xcassets */; };
@@ -17,10 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F929ABD299B4D93002962E5 /* DownloaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTableViewCell.swift; sourceTree = "<group>"; };
+		6F929ABF299B4DF8002962E5 /* DownloadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadVC.swift; sourceTree = "<group>"; };
+		6F929AC1299B5523002962E5 /* SaveCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCoreData.swift; sourceTree = "<group>"; };
+		6F929AC5299BB0BC002962E5 /* LoginPageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageError.swift; sourceTree = "<group>"; };
 		6FB90AEA299AC3BD00C03AC2 /* VideoDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB90AED299AC3BD00C03AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FB90AEF299AC3BD00C03AC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6FB90AF1299AC3BD00C03AC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FB90AF1299AC3BD00C03AC2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6FB90AF4299AC3BD00C03AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FB90AF7299AC3BD00C03AC2 /* VideoDownloader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoDownloader.xcdatamodel; sourceTree = "<group>"; };
 		6FB90AF9299AC3BD00C03AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +68,11 @@
 			children = (
 				6FB90AED299AC3BD00C03AC2 /* AppDelegate.swift */,
 				6FB90AEF299AC3BD00C03AC2 /* SceneDelegate.swift */,
-				6FB90AF1299AC3BD00C03AC2 /* ViewController.swift */,
+				6F929ABD299B4D93002962E5 /* DownloaderTableViewCell.swift */,
+				6F929ABF299B4DF8002962E5 /* DownloadVC.swift */,
+				6F929AC1299B5523002962E5 /* SaveCoreData.swift */,
+				6FB90AF1299AC3BD00C03AC2 /* LoginVC.swift */,
+				6F929AC5299BB0BC002962E5 /* LoginPageError.swift */,
 				6FB90AF3299AC3BD00C03AC2 /* Main.storyboard */,
 				6FB90AF9299AC3BD00C03AC2 /* Assets.xcassets */,
 				6FB90AFB299AC3BD00C03AC2 /* LaunchScreen.storyboard */,
@@ -141,10 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB90AF2299AC3BD00C03AC2 /* ViewController.swift in Sources */,
+				6FB90AF2299AC3BD00C03AC2 /* LoginVC.swift in Sources */,
 				6FB90AEE299AC3BD00C03AC2 /* AppDelegate.swift in Sources */,
 				6FB90AF8299AC3BD00C03AC2 /* VideoDownloader.xcdatamodeld in Sources */,
 				6FB90AF0299AC3BD00C03AC2 /* SceneDelegate.swift in Sources */,
+				6F929AC2299B5523002962E5 /* SaveCoreData.swift in Sources */,
+				6F929AC0299B4DF8002962E5 /* DownloadVC.swift in Sources */,
+				6F929ABE299B4D93002962E5 /* DownloaderTableViewCell.swift in Sources */,
+				6F929AC6299BB0BC002962E5 /* LoginPageError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

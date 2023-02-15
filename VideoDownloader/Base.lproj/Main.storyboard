@@ -1,24 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="VideoDownloader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-hw-bxS">
+                                <rect key="frame" x="22" y="601" width="348" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86180160979999998" green="0.26276339300000001" blue="0.25740550410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Zt-Hq-CM2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nfp-BE-9R3">
+                                <rect key="frame" x="48" y="107" width="297" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.down.left.video" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-8L-Yso">
+                                        <rect key="frame" x="0.0" y="16.666666666666686" width="87" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="My Video Downloader" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-2g-zTU">
+                                        <rect key="frame" x="94" y="8" width="195" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.8703440657" green="0.26536798859999999" blue="0.25995699059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86809501262626265" green="0.26468225215063945" blue="0.25928523665100794" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RxO-zO-iLP">
+                                <rect key="frame" x="22" y="504" width="348" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-rC-dQm">
+                                        <rect key="frame" x="39" y="3" width="305" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6aT-10-epz">
+                                        <rect key="frame" x="8" y="12" width="28" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CjE-w6-QhN">
+                                <rect key="frame" x="22" y="439" width="348" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="kNc-Qg-Qow">
+                                        <rect key="frame" x="39" y="3" width="305" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lL4-Z3-cA6">
+                                        <rect key="frame" x="8" y="13" width="28" height="24.666666666666664"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.91999012231826782" green="0.83018816060318001" blue="0.84629753584903677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="ADr-hw-bxS" id="wAc-ug-DCy"/>
+                        <outlet property="passwordTF" destination="vTw-rC-dQm" id="tcN-TB-NUc"/>
+                        <outlet property="passwordView" destination="RxO-zO-iLP" id="YKW-ic-vhZ"/>
+                        <outlet property="titleView" destination="Nfp-BE-9R3" id="AX2-VP-xRb"/>
+                        <outlet property="usernameTF" destination="kNc-Qg-Qow" id="21S-vE-8LF"/>
+                        <outlet property="usernameView" destination="CjE-w6-QhN" id="QqR-0a-NyF"/>
+                        <segue destination="Uzr-L0-7K4" kind="presentation" identifier="toDownloadVC" modalPresentationStyle="fullScreen" id="lhy-ZF-sHb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+        <!--DownloadVC-->
+        <scene sceneID="PkQ-i7-eXS">
+            <objects>
+                <viewController id="Uzr-L0-7K4" customClass="DownloadVC" customModule="VideoDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moY-ln-7Sg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAK-xc-fdn">
+                                <rect key="frame" x="22" y="763" width="348" height="35"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download Random Video"/>
+                                <connections>
+                                    <action selector="downloadButtonClicked:" destination="Uzr-L0-7K4" eventType="touchUpInside" id="9Ht-rd-vq3"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ey7-Ix-vR3">
+                                <rect key="frame" x="0.0" y="59" width="393" height="696"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="696" id="7Tc-PI-CZT"/>
+                                    <constraint firstAttribute="width" constant="393" id="iE0-Dh-IE1"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="downloadCell" rowHeight="96" id="EG5-6E-viP" customClass="DownloaderTableViewCell" customModule="VideoDownloader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EG5-6E-viP" id="5Oa-fI-ULp">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjW-MO-0fx">
+                                                    <rect key="frame" x="85" y="21" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hl1-4l-9Nf">
+                                                    <rect key="frame" x="85" y="60" width="229" height="4"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="4" id="Hs2-Ql-Taf"/>
+                                                    </constraints>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdO-QR-awD">
+                                                    <rect key="frame" x="339" y="52" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWW-7l-wYT">
+                                                    <rect key="frame" x="11" y="11" width="66" height="62"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="66" id="6ZZ-0m-yN2"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hl1-4l-9Nf" firstAttribute="centerY" secondItem="BdO-QR-awD" secondAttribute="centerY" id="2PL-3Z-qbK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BdO-QR-awD" secondAttribute="trailing" constant="-8" id="6vq-Mr-j3l"/>
+                                                <constraint firstItem="JjW-MO-0fx" firstAttribute="leading" secondItem="hl1-4l-9Nf" secondAttribute="leading" id="A2O-VW-neu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BWW-7l-wYT" secondAttribute="bottom" constant="12" id="CvV-cL-SwA"/>
+                                                <constraint firstItem="BWW-7l-wYT" firstAttribute="bottom" secondItem="BdO-QR-awD" secondAttribute="bottom" id="DFx-CE-vgw"/>
+                                                <constraint firstItem="BdO-QR-awD" firstAttribute="leading" secondItem="hl1-4l-9Nf" secondAttribute="trailing" constant="25" id="Iix-H2-Fdy"/>
+                                                <constraint firstItem="BWW-7l-wYT" firstAttribute="leading" secondItem="5Oa-fI-ULp" secondAttribute="leadingMargin" constant="-9" id="JqT-7D-oby"/>
+                                                <constraint firstItem="JjW-MO-0fx" firstAttribute="leading" secondItem="BWW-7l-wYT" secondAttribute="trailing" constant="8" symbolic="YES" id="LDE-fW-nc5"/>
+                                                <constraint firstItem="hl1-4l-9Nf" firstAttribute="top" secondItem="JjW-MO-0fx" secondAttribute="bottom" constant="18" id="Xyy-K5-qaM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JjW-MO-0fx" secondAttribute="trailing" constant="8" id="ZiS-qk-5gq"/>
+                                                <constraint firstItem="BWW-7l-wYT" firstAttribute="top" secondItem="5Oa-fI-ULp" secondAttribute="topMargin" id="s8l-ow-cu1"/>
+                                                <constraint firstItem="JjW-MO-0fx" firstAttribute="top" secondItem="5Oa-fI-ULp" secondAttribute="topMargin" constant="10" id="t6Z-Wd-7GJ"/>
+                                                <constraint firstItem="BdO-QR-awD" firstAttribute="top" secondItem="JjW-MO-0fx" secondAttribute="bottom" constant="10" id="toM-rX-sHt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="downloadPercentageLabel" destination="BdO-QR-awD" id="elE-5J-Qga"/>
+                                            <outlet property="downloadProgressView" destination="2PL-3Z-qbK" id="Z0D-1L-KhR"/>
+                                            <outlet property="videoImageView" destination="BWW-7l-wYT" id="G1G-pj-cLG"/>
+                                            <outlet property="videoNameLabel" destination="JjW-MO-0fx" id="pKk-er-sRL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LOH-Ma-cJg"/>
+                        <color key="backgroundColor" red="0.91999012229999999" green="0.8301881606" blue="0.8462975358" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lAK-xc-fdn" firstAttribute="leading" secondItem="LOH-Ma-cJg" secondAttribute="leading" constant="22" id="KXz-K4-2t8"/>
+                            <constraint firstItem="ey7-Ix-vR3" firstAttribute="centerX" secondItem="lAK-xc-fdn" secondAttribute="centerX" id="VPX-GP-hbm"/>
+                            <constraint firstItem="ey7-Ix-vR3" firstAttribute="leading" secondItem="LOH-Ma-cJg" secondAttribute="leading" id="X9K-Ay-ALP"/>
+                            <constraint firstItem="ey7-Ix-vR3" firstAttribute="top" secondItem="LOH-Ma-cJg" secondAttribute="top" id="YGU-9j-Qe9"/>
+                            <constraint firstItem="ey7-Ix-vR3" firstAttribute="trailing" secondItem="LOH-Ma-cJg" secondAttribute="trailing" id="bUW-o1-huO"/>
+                            <constraint firstItem="lAK-xc-fdn" firstAttribute="top" secondItem="ey7-Ix-vR3" secondAttribute="bottom" constant="8" symbolic="YES" id="d4J-gK-mhF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlF-85-R6f"/>
+                    <connections>
+                        <outlet property="downloadButton" destination="lAK-xc-fdn" id="bAR-Kf-5cm"/>
+                        <outlet property="downloadTV" destination="ey7-Ix-vR3" id="Xh8-cx-yQ7"/>
+                        <segue destination="AXb-dq-lJ2" kind="show" identifier="toAVPlayerVC" id="a9v-Ln-RVB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opg-V3-bMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.29770992366412" y="3.5211267605633805"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="rng-jN-yKd">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="AXb-dq-lJ2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b2i-Jd-EKq"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9b-XO-rvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.down.left.video" catalog="system" width="128" height="82"/>
+        <image name="lock.fill" catalog="system" width="125" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
